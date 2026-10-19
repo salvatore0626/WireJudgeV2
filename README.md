@@ -1,4 +1,4 @@
-# Wire Judge V1.3
+# Wire Judge V2.0
 by STRAYDOG0626
 
 View and score VTOL VR `.vtr` carrier approaches, replay flights on a 2D map, or play **Airfield Defense** in the Game tab.
