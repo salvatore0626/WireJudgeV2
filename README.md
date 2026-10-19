@@ -5,20 +5,9 @@ View and score VTOL VR `.vtr` carrier approaches, replay flights on a 2D map, or
 
 ## Run
 
-**Windows:** Open `Wire_Judge.exe`. No Python installation needed. Build it yourself with Python 3.11+ and `build_windows.bat`.
+**Windows:**  `build_windows.bat`. is everything you need to install the correct python and python libraries to build a portable **Wire Judge.exe**. Extract the zip folder into a folder anywhere you'd like. run `build_windows.bat`. once its done it will create a .exe that you can put on your desktop or whereever you want.
 
-**Linux build:** On Ubuntu 24.04+ or a compatible Mint version, install prerequisites, then build from the full project folder:
-
-```sh
-sudo apt update
-sudo apt install python3 python3-venv python3-tk binutils pulseaudio-utils
-bash build_linux.sh
-./dist/Wire_Judge
-```
-
-The first build needs internet access. Build Linux releases on Linux for the intended CPU architecture; test on the distributions you support. Distribute `dist/Wire_Judge`; game settings and sounds are bundled in the executable. If needed, run `chmod +x Wire_Judge` after extracting. Sound uses `paplay` or `aplay`.
-
-**Run from source:** Use Python 3.11+ with Tkinter. Open a terminal in the project folder:
+or
 
 Windows:
 ```powershell
@@ -34,6 +23,14 @@ python3 -m venv .venv
 .venv/bin/python app.py
 ```
 
+**Linux build:** On Ubuntu 24.04+ or a compatible Mint version, install prerequisites, then build from the full project folder:
+
+```sh
+sudo apt update
+sudo apt install python3 python3-venv python3-tk binutils pulseaudio-utils
+bash build_linux.sh
+./dist/Wire_Judge
+```
 ## Replays
 
 Select a replay, choose its carrier, then select **Case 1** or **Case 3** and an attempt. Set **Wire Caught** or **Bolter** when known. Windows replay files are usually under:
@@ -70,7 +67,7 @@ Replay Map starts with **Only Landing** off. Opening an attempt leaves that togg
 | `core/` | Replay reading, approach analysis, scoring, saved edits, and shared audio. |
 | `ui/` | Application views, plots, timeline editor, export, and animations. |
 | `replay/` | Replay Map, playback rendering, aircraft inspector, and carrier drawing. |
-| `game/` | Airfield Defense code, settings, settings editor, notes, and game sounds. |
+| `game/` | Airfield Defense, settings, settings editor, notes, and game sounds. |
 | `assets/` | Shared icons, logos, carrier stencil, and application sounds. |
 | `config/` | Python dependency requirements. |
 | `data/replays/` | Included example replay. |
